@@ -98,21 +98,23 @@ If you have an error saying that `mkl_intel_thread.dll` cannot be found, you can
 [install]: https://www.anaconda.com/distribution/#windows
 [prompt]: https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-prompt-win
 
-## Solutions to known problems in Windows 10 / 64 bits - Anaconda version 5.3.0 (Build Channel py37_0)
+#### Solutions to known problems in Windows 10 / 64 bits - Anaconda version 5.3.0 (Build Channel py37_0)
 
 To know Anaconda version, execute the following command in Anaconda Prompt
 ```bash
 conda list anaconda$
 ```
-#Problem 1: PermissionError(13, 'Permission denied')
+##### Problem 1: PermissionError(13, 'Permission denied')
 
 Execute Anaconda Prompt as Administrator (Source: https://github.com/conda/conda/issues/7404)
 
-#Problem 2: OPENSSL_sk_new_reserve C:\(...)\Anaconda3\Library\bin\libssl11_-x64.dll 
+
+##### Problem 2: OPENSSL_sk_new_reserve C:\(...)\Anaconda3\Library\bin\libssl11_-x64.dll 
 
 Copy `libssl-1_1-x64.dll` in `Anaconda/DLLS` to `Anaconda/Library/bin` replacing the old `libssl-1_1-x64.dll`
+(Source: https://stackoverflow.com/questions/57254007/how-to-fix-entry-point-not-found-while-installing-libraries-in-conda-environment)
 
-#Problem 3: Pytorch instaling is interrupted by network problems
+##### Problem 3: Pytorch instaling is interrupted by network problems
 
 Just keep it on trying again and again
 
